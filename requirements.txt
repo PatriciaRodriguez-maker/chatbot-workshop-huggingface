@@ -1,6 +1,7 @@
 streamlit
+sentence-transformers
 llama-index
-llama-index-llms-openai
+llama-index-embeddings-huggingface
 llama-index-llms-gemini
 llama-index-embeddings-gemini
 llama_index-embeddings-google_genai
