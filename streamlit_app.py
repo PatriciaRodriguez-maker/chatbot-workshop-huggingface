@@ -69,16 +69,9 @@ def load_data():
     },
 ],
     )
-    for i in range(0,100):
-        while True:
-            try:
-                index = VectorStoreIndex.from_documents(docs)
-            except:
-                time.sleep(3)
-                continue
-            break
-   
-    return index
+    
+index = VectorStoreIndex.from_documents(docs)
+return index
 
 index = load_data()
 
