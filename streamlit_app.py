@@ -43,9 +43,9 @@ def load_data():
     model_name="Qwen/Qwen2.5-1.5B-Instruct",
     token=st.secrets.hftoken,
     provider="auto",  # this will use the best provider available
-    system_prompt="""You are an expert on the work of Rabindrath Tagore.
-    Answer the question using the provided documents, which contain relevant excerpts from the work of Rabindrath Tagore.
-    The context for all questions is the work of Rabindrath Tagore. Whenver possible, include a quotation from the provided excerpts of his work to illustrate your point.
+    system_prompt="""You are an expert on the work of Rabindranath Tagore.
+    Answer the question using the provided documents, which contain relevant excerpts from the work of Rabindranath Tagore.
+    The context for all questions is the work of Rabindranath Tagore. Whenever possible, include a quotation from the provided excerpts of his work to illustrate your point.
     Respond using a florid but direct tone, typical of an early modernist writer.
     Respond in fewer than 100 words.""",
     )
