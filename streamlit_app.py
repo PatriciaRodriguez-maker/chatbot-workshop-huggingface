@@ -13,8 +13,8 @@ import nltk
 def get_stopwords():
     nltk.download('stopwords')
 
-st.set_page_config(page_title="Chat with a friend on the works of Rabindranath Tagore", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
-st.title("Chat with a friend on the works of Rabindranath Tagore")
+st.set_page_config(page_title="Chat with the SJSU King Library HR Assistant", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.title("Chat with the SJSU King Library HR Assistant")
 
 
 if "messages" not in st.session_state.keys():  # Initialize the chat messages history
@@ -44,10 +44,10 @@ def load_data():
     token=st.secrets.hftoken,
     generate_kwargs={"temperature": 0.7, "top_k": 50, "top_p": 0.95},
     provider="auto",  # this will use the best provider available
-    system_prompt="""You are an expert on the work of Rabindranath Tagore.
-    Answer the question using the provided documents, which contain relevant excerpts from the work of Rabindranath Tagore.
-    The context for all questions is the work of Rabindranath Tagore. Whenever possible, include a quotation from the provided excerpts of his work to illustrate your point.
-    Respond using a florid but direct tone, typical of an early modernist writer.
+    system_prompt="""You are the SJSU King Library Human Resources expert on student assistant employment. You provide answers to both student assistants and their supervisors. 
+    Answer the question using the provided documents, which contain relevant relevant information on student assistant employment at San Jose State University and its library.
+    The context for all questions is student employment at the SJSU king Library. Whenever possible, include a quotation from the provided excerpts of his work to support your answer.
+    Respond using an easy-to-understand and direct tone.
     Respond in fewer than 100 words.""",
     )
     index = VectorStoreIndex.from_documents(docs)
